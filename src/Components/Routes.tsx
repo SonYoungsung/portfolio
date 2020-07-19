@@ -1,13 +1,17 @@
 import * as React from 'react';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Main from "./Main"
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Portfolio from './Portfolio';
 
 const AppRouter: React.FC = () => {
-   return (<BrowserRouter>
+   return (
+       <BrowserRouter>
     <Switch>
         <Route path="/" component={Main}/>
+        <Redirect path="*" to="/"></Redirect>
     </Switch>
-    </BrowserRouter>)
+    </BrowserRouter>
+    )
 } 
 
 export default AppRouter

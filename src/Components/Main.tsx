@@ -3,12 +3,16 @@ import styled from "styled-components"
 import { faGithub, faMedium, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Portfolio from "./Portfolio"
+import About from "./About"
 
 const Wrapper = styled.div`
   position: relative;
   background: #171717;
   height: 100vh;
-  z-index: 4
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 const Tri = styled.div`
@@ -19,7 +23,7 @@ const Tri = styled.div`
   border-top:490px solid transparent;
   border-bottom:487px solid transparent;
   border-left: 600px solid  #9E9E9E;
-  z-index: 0
+  z-index: 0;
 `
 
 const TriBlock = styled.div`
@@ -27,16 +31,15 @@ position: absolute;
 background: #9E9E9E;
 width:150px;
 height: 100vh;
-z-index: 3
+z-index: 3;
+left: 0px;
 `
 
 const BackGround = styled.div`
   position: relative;
   background: linear-gradient(#E7E7E7, #F4F4F4);
-  height: 80vh;
+  height: 840px;
   width: 70%;
-  top: 100px;
-  left: 300px;
   z-index: 1
   padding: 50px;
   display: flex;
@@ -206,7 +209,7 @@ const Main: React.FC = () => {
      </li>
      </ul>
    </Icons>
-   </Bottom></div>) : comp === "Portpolio" ? <Portfolio></Portfolio> : null}
+   </Bottom></div>) : comp === "Portpolio" ? <Portfolio></Portfolio> : comp === "About" ? <About></About> : <About></About>}
 </BackGround>
 </Wrapper>
   

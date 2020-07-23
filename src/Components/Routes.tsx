@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Main from "./Main"
-import Portfolio from './Portfolio';
 
 const AppRouter: React.FC = () => {
    return (
